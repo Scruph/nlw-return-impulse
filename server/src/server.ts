@@ -12,6 +12,6 @@ app.use(routes);
 
 // a aplicação vai "ouvir" a porta /3333
 //função que será executada assim que o servidor estiver no ar
-app.listen(3333, () => {
+app.listen(process.env.PORT || 3333, () => {
   console.log('HTTP server runing!');
 });
