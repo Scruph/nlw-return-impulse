@@ -8,7 +8,7 @@
 
 <br>
   <h1>
-	  :space_invader: Technologies
+	  :space_invader:  Technologies
   </h1>
   
   - Vite
