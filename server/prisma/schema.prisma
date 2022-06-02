@@ -1,0 +1,24 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// modelo/entidade
+// O prisma cria uma tabela no BD chamada Feedback
+model Feedback {
+  //colunas:
+  id String @id @default(uuid()) //@id -> primary key | uuid -> universally unique identifier
+
+  type       String
+  comment    String
+  screenshot String? //opcional
+  // o Diego prefere que a tabela tenha o nome dessa forma:
+  @@map("feedbacks")
+}
